@@ -5,3 +5,6 @@ setuptools-scm
 pytest-flake8
 pytest-cov
 pytest-mock
+
+docopt
+requests
