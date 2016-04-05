@@ -7,22 +7,24 @@ import os
 
 from docopt import docopt
 
-from pyenv_mirror_download.metadata import VERSION
-from pyenv_mirror_download.locate_scripts import (
+from pyenv_mirror.metadata import VERSION
+from pyenv_mirror.locate_scripts import (
     check_directory,
     check_script,
 )
-from pyenv_mirror_download.parse_script import (
+from pyenv_mirror.parse_script import (
     extract_urls,
 )
-from pyenv_mirror_download.download import (
+from pyenv_mirror.download import (
     download_source_package,
 )
 
 
 DOC = '''
 Usage:
-    pyenv-mirror-download <pkg-name> [<python-build-path>]
+    pyenv-mirror create-mirror
+    pyenv-mirror download <pkg-name> [<python-build-path>]
+    pyenv-mirror start [--port=<PORT>]
 '''
 
 

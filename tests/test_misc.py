@@ -1,9 +1,9 @@
 import os
-from pyenv_mirror_download.locate_scripts import (
+from pyenv_mirror.locate_scripts import (
     check_directory,
     check_script,
 )
-from pyenv_mirror_download.parse_script import (
+from pyenv_mirror.parse_script import (
     extract_filename,
     extract_urls,
 )

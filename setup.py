@@ -11,7 +11,7 @@ from setuptools import setup, find_packages
 # load metadata.
 metadata = imp.load_source(
     'metadata',
-    os.path.join('pyenv_mirror_download', 'metadata.py'),
+    os.path.join('pyenv_mirror', 'metadata.py'),
 )
 
 
@@ -54,7 +54,7 @@ setup(
     install_requires=load_requirements('requirements.txt'),
     entry_points={
         'console_scripts': [
-            'pyenv-mirror-download = pyenv_mirror_download.main:entry_point'
+            'pyenv-mirror-download = pyenv_mirror.main:entry_point'
         ],
     },
 )
