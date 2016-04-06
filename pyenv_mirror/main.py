@@ -23,16 +23,12 @@ from pyenv_mirror.download import (
 DOC = '''
 Usage:
     pyenv-mirror create-mirror
-    pyenv-mirror download <pkg-name> [<python-build-path>]
-    pyenv-mirror start [--port=<PORT>]
+    pyenv-mirror run-server [--port=<PORT>]
+    pyenv-mirror download-package <pkg-name> [<python-build-path>]
 '''
 
 
-def entry_point():
-    args = docopt(DOC, version=VERSION)
-    pkg_name = args['<pkg-name>']
-    python_build_path = args['<python-build-path>'] or None
-
+def download(pkg_name, python_build_path):
     # init.
     target_dir_path = check_directory(python_build_path)
     if target_dir_path is None:
@@ -56,3 +52,16 @@ def entry_point():
             f.write(binary)
 
     return 0
+
+
+def entry_point():
+    args = docopt(DOC, version=VERSION)
+    if args['download-package']:
+        return download(
+            args['<pkg-name>'],
+            args['<python-build-path>'] or None,
+        )
+    elif args['create-mirror']:
+        pass
+    elif args['run-server']:
+        pass
