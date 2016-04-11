@@ -31,8 +31,8 @@ Usage:
 def create_mirror():
     dirname = os.path.dirname
     mirror_dir_path = os.path.join(
-        dirname(dirname(__file__)),
-        'scripts/pyenv-local-mirror',
+        dirname(__file__),
+        '.pyenv-local-mirror',
     )
     shutil.copytree(mirror_dir_path, 'pyenv-local-mirror')
 

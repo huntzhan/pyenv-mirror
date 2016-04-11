@@ -2,3 +2,4 @@ include README.rst
 include requirements.txt
 recursive-include tests *
 recursive-include scripts *
+recursive-include pyenv_mirror/.pyenv-local-mirror *

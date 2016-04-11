@@ -51,6 +51,7 @@ setup(
     ],
     # critical configurations.
     packages=find_packages(),
+    include_package_data=True,
     install_requires=load_requirements('requirements.txt'),
     entry_points={
         'console_scripts': [
