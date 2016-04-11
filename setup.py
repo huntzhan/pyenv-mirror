@@ -54,7 +54,7 @@ setup(
     install_requires=load_requirements('requirements.txt'),
     entry_points={
         'console_scripts': [
-            'pyenv-mirror-download = pyenv_mirror.main:entry_point'
+            'pyenv-mirror = pyenv_mirror.main:entry_point'
         ],
     },
 )
