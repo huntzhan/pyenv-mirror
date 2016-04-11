@@ -4,7 +4,7 @@ from __future__ import (division, absolute_import, print_function,
 
 
 NAME = 'pyenv_mirror'
-VERSION = '0.1.0'
+VERSION = '0.2.0'
 AUTHORS = [
     'huntzhan',
 ]
@@ -13,4 +13,4 @@ EMAILS = [
 ]
 LICENSE = ''
 URL = ''
-DESCRIPTION = ' Download Source Packages For yyuu.github.com/pythons. '
+DESCRIPTION = ''
