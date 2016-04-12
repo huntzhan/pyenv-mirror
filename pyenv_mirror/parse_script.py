@@ -1,5 +1,13 @@
+# -*- coding: utf-8 -*-
+from __future__ import (division, absolute_import, print_function,
+                        unicode_literals)
+
 import re
-from urllib.parse import urlparse
+
+from future.standard_library import hooks
+
+with hooks():
+    from urllib.parse import urlparse
 
 
 def extract_filename(parsed_url):
