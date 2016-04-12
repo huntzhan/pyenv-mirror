@@ -11,7 +11,7 @@ pip install pyenv-mirror
 # Usage
 
 ```
-$ pyenv-mirror-download --help                                                                
+$ pyenv-mirror --help                                                                
 Usage:
     pyenv-mirror create-mirror
     pyenv-mirror download-package <pkg-name> [<python-build-path>]
