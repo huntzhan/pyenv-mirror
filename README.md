@@ -59,7 +59,7 @@ Python-2.7.tgz        openssl-1.0.2g.tar.gz readline-6.3.tar.gz
 ## Install And Bind `pyenv` To Local Mirror
 
 ```
-$ wget -O - '<your PYTHON_BUILD_MIRROR_URL>/scripts/nstall-pyenv.sh' | bash
+$ wget -O - '<your PYTHON_BUILD_MIRROR_URL>/scripts/install-pyenv.sh' | bash
 ```
 
 Above command would install `pyenv` to `$PYENV_ROOT`. If omitted, `$PYENV_ROOT` defaults to `~/.pyenv`.
