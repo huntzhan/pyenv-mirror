@@ -25,10 +25,10 @@ conditional_mv() {
   [ -d "$2" ] || mkdir -p "$2" && mv "$1"/* "$2"
 }
 
-if ! command -v git 1>/dev/null 2>&1; then
-  echo "pyenv: Git is not installed, can't continue." >&2
-  exit 1
-fi
+# if ! command -v git 1>/dev/null 2>&1; then
+#   echo "pyenv: Git is not installed, can't continue." >&2
+#   exit 1
+# fi
 
 # PYENV_PACKAGE_ARCHIVE is the path of pyenv compressed archive file.
 if [ -z "$PYENV_PACKAGE_ARCHIVE" ]; then

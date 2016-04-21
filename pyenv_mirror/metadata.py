@@ -4,7 +4,7 @@ from __future__ import (division, absolute_import, print_function,
 
 
 NAME = 'pyenv_mirror'
-VERSION = '0.2.2'
+VERSION = '0.2.3'
 AUTHORS = [
     'huntzhan',
 ]
