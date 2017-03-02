@@ -56,6 +56,13 @@ Python-2.7.tgz        openssl-1.0.2g.tar.gz readline-6.3.tar.gz
    default, `PORT` equals to `8999`.
 3. Execute script `./pythons/run-http-server.sh`.
 
+### Update Pyenv Index Page
+
+1. `cd pyenv-local-mirror/pythons`.
+2. Download Different Pythons (e.g. 2.7.x, 3.5.x) into `source` dir.
+3. Exec `bash update.sh`
+4. Open <your PYTHON_BUILD_MIRROR_URL>/pythons/index.html to see available Pythons info.
+
 ## Install And Bind `pyenv` To Local Mirror
 
 ```
@@ -71,3 +78,19 @@ export PYTHON_BUILD_MIRROR_URL=$<your PYTHON_BUILD_MIRROR_URL>/pythons
 ```
 
 to your configuration file so that `pyenv` could download the packages from your local mirror.
+
+### Incremental Update on Python Versions
+
+When you need to install a new Python into your local Pyenv, e.g., `2.7.11`, usually, you can do as following:
+
+```
+pyenv install 2.7.11
+```
+
+However, as newer Pythons come into being, local Pyenv does have the `index` to download them.
+Therefore, a safer way to install Pythons for local Pyenv would be like:
+
+1. Download `index` of needed version, e.g., 2.7.13, from [here](https://github.com/yyuu/pyenv/tree/master/plugins/python-build/share/python-build) into a directory, say `xxx_dir`
+2. cd `xxx_dir`
+3. `pyenv install 2.7.13`
+4. rm the index file, 2.7.13
