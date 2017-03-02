@@ -47,13 +47,16 @@ compute_md5() {
   fi
 }
 
+lis=""
 for file in source/*; do
   base="$(basename "$file")"
   md5="$(compute_md5 < "$file")"
   sha="$(compute_sha2 < "$file")"
   ln -f "$file" "$md5"
   ln -f "$file" "$sha"
-  sed -i -e "/>$base</s/^.*$/<li><a href=\"$sha\">$base<\/a><\/li>/" index.html
+  lis="$lis<li><a href=$sha>$base</a></li>"
 done
+
+sed "s:{PLACE_HOLDER}:$lis:" index.html.templ > index.html
 
 # vim:set ft=sh :
