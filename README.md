@@ -78,3 +78,19 @@ export PYTHON_BUILD_MIRROR_URL=$<your PYTHON_BUILD_MIRROR_URL>/pythons
 ```
 
 to your configuration file so that `pyenv` could download the packages from your local mirror.
+
+### Incremental Update on Python Versions
+
+When you need to install a new Python into your local Pyenv, e.g., `2.7.11`, usually, you can do as following:
+
+```
+pyenv install 2.7.11
+```
+
+However, as newer Pythons come into being, local Pyenv does have the `index` to download them.
+Therefore, a safer way to install Pythons for local Pyenv would be like:
+
+1. Download `index` of needed version, e.g., 2.7.13, from [here](https://github.com/yyuu/pyenv/tree/master/plugins/python-build/share/python-build) into a directory, say `xxx_dir`
+2. cd `xxx_dir`
+3. `pyenv install 2.7.13`
+4. rm the index file, 2.7.13
